@@ -230,6 +230,59 @@ router.get("/", (req, res) => {
   });
 });
 
+
+router.get("/acc_car", (req, res) => {
+  res.json({
+    Accounts_Cars: [
+    {
+        '_id': 0,
+        'Account_id': 0,
+        'Car_id': 0
+    },
+    {
+        '_id': 1,
+        'Account_id': 0,
+        'Car_id': 1
+    },
+    {
+        '_id': 2,
+        'Account_id': 1,
+        'Car_id': 2
+    },
+    {
+        '_id': 3,
+        'Account_id': 3,
+        'Car_id': 3
+    },
+    {
+        '_id': 4,
+        'Account_id': 3,
+        'Car_id': 5
+    },
+    {
+        '_id': 5,
+        'Account_id': 3,
+        'Car_id': 7
+    },
+    {
+        '_id': 6,
+        'Account_id': 4,
+        'Car_id': 6
+    },
+    {
+        '_id': 7,
+        'Account_id': 4,
+        'Car_id': 4
+    },
+    {
+        '_id': 8,
+        'Account_id': 4,
+        'Car_id': 8
+    }
+  ]
+  });
+});
+
 app.use(`/.netlify/functions/api`, router);
 
 module.exports = app;
